@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const ObjectId = mongoose.Types.ObjectId;
 router.use(express.json());
 
-const usuariosSchema = require("./productos");
+const usuariosSchema = require("./usuarios");
 
 router.get("/", (req, res) => {
     usuariosSchema
