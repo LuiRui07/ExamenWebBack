@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const eventosSchema = new mongoose.Schema({
     nombre: {
         type: String,
-        required: true,
+        required: false,
     },
     timestamp: {
         type: Date,
