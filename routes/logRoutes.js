@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
 // GET ONE
 router.get('/:id', async (req, res) => {
     try {
-        const logConexiones = await LogConexiones.findById(req.params.id);
+        const logConexiones = await LogConexiones.findById(req.params.id).sort({ timestamp: -1 });
         res.json(logConexiones);
     }
     catch (err) {
