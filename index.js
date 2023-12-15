@@ -7,8 +7,21 @@ const port = 5001;
 app.use(express.json());
 app.use(cors());
 
-const routes = require("./routes.js")
-app.use('/api', routes);
+
+///Routes
+const Userroutes = require("./routes/usuarioRoutes.js")
+const MapRoutes = require("./routes/MapRoutes.js")
+const LogRoutes = require("./routes/logRoutes.js")
+const Cloudinary = require("./routes/cloudinaryRoutes.js")
+
+app.use('/user', Userroutes);
+app.use('/map', MapRoutes);
+app.use('/logs', LogRoutes);
+app.use('/cloudinary', Cloudinary);
+
+/////
+
+
 mongoose.connect(
   "mongodb+srv://ei:ei@cluster0.1acabfy.mongodb.net/kalendas").then(()=>
     console.log("Hemos conectado con mongoDB")
