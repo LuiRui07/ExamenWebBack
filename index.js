@@ -10,7 +10,7 @@ app.use(cors());
 
 ///Routes
 const Userroutes = require("./routes/usuarioRoutes.js")
-const MapRoutes = require("./routes/MapRoutes.js")
+const MapRoutes = require("./routes/mapRoutes.js")
 const LogRoutes = require("./routes/logRoutes.js")
 const Cloudinary = require("./routes/cloudinaryRoutes.js")
 
